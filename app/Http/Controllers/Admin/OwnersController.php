@@ -148,7 +148,7 @@ class OwnersController extends Controller
 
     public function expiredOwnerIndex()
     {
-        $expiredOwners = Owner::onlyTrashed()->get();
+        $expiredOwners = Owner::onlyTrashed()->paginate(3);
         return view('admin.expired-owners', compact('expiredOwners'));
     }
 

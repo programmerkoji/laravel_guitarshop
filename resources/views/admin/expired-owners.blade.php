@@ -11,10 +11,10 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <section class="text-gray-600 body-font">
                         <div class="container px-5 mx-auto">
+                            <x-flash-message status="session('status')" />
                             <div class="lg:w-3/4 w-full mx-auto overflow-auto">
-                                <x-flash-message status="session('status')" />
                                 <table class="table-auto w-full text-left whitespace-no-wrap">
-                                <thead>
+                                <thead class="whitespace-nowrap">
                                     <tr>
                                     <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">名前</th>
                                     <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">メールアドレス</th>
@@ -23,7 +23,7 @@
                                     <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="whitespace-nowrap">
                                     @foreach ($expiredOwners as $owner)
                                     <tr>
                                     <td class="px-4 py-3">{{ $owner->name }}</td>
@@ -46,6 +46,7 @@
                                 </tbody>
                                 </table>
                             </div>
+                            {{ $expiredOwners->links() }}
                         </div>
                     </section>
                 </div>
