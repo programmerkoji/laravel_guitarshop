@@ -9,6 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
+                    <!-- Validation Errors -->
+                    <x-auth-validation-errors class="mb-4 lg:w-2/3 mx-auto" :errors="$errors" />
                     <form action="{{ route('owner.shops.update', ['shop' => $shop->id]) }}" method="post" enctype="multipart/form-data" class="lg:w-2/3 mx-auto">
                         @csrf
                         <div class="-m-2">
