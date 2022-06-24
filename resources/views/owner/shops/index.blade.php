@@ -22,7 +22,7 @@
                                         @endif
                                     </div>
                                     <figure class="mb-2">
-                                        <x-shop-thumbnail :filename="$shop->filename" />
+                                        <x-thumbnail :filename="$shop->filename" type="shops" />
                                     </figure>
                                     <h3 class="text-2xl mb-2">{{ $shop->name }}</h3>
                                     <p>{{ $shop->information }}</p>

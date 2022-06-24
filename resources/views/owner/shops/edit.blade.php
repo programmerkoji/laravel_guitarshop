@@ -28,7 +28,7 @@
                             </div>
                             <div class="p-2">
                                 <figure class="w-32">
-                                    <x-shop-thumbnail :filename="$shop->filename" />
+                                    <x-thumbnail :filename="$shop->filename" type="shops" />
                                 </figure>
                             </div>
                             <div class="p-2">
