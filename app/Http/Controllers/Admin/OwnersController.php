@@ -133,7 +133,6 @@ class OwnersController extends Controller
         ]);
 
         $owner = Owner::findOrFail($id);
-
         $owner->name = $request->name;
         $owner->email = $request->email;
         $owner->password = Hash::make($request->name);
