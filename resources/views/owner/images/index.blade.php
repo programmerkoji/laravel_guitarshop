@@ -13,14 +13,14 @@
                     <div class="flex justify-end lg:w-3/4 mx-auto mb-4">
                         <button onclick="location.href='{{ route('owner.images.create') }}'" class="flex text-white bg-blue-500 border-0 py-2 px-12 focus:outline-none hover:bg-blue-600 rounded text-lg">新規登録</button>
                     </div>
-                    <ul>
+                    <ul class="flex flex-wrap">
                         @foreach ($images as $image)
-                            <li class="md:w-1/4">
+                            <li class="md:w-1/4 p-2">
                                 <a href="{{ route('owner.images.edit', ['image' => $image->id]) }}" class="block border rounded-md p-4">
                                     <figure class="mb-2">
-                                        <x-thumbnail :filename="$shop->filename" type="products" />
+                                        <x-thumbnail :filename="$image->filename" type="products" />
                                     </figure>
-                                    <h3 class="text-2xl mb-2">{{ $shop->title }}</h3>
+                                    <h3 class="text-2xl mb-2">{{ $image->title }}</h3>
                                 </a>
                             </li>
                         @endforeach
