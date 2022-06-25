@@ -16,4 +16,5 @@ php artisan storage:link
 
 storage/app/public/productsフォルダ内に
 保存すると表示されます。
+
 （productフォルダがない場合には、作成してください）
